@@ -31,5 +31,8 @@ hotfix: 현재 서비스에서 긴급하게 수정해야 되는 부분에 대하
 최신 상태의 레포지토리 가져오기
 
 # 개발 관련
-## 가상환경 진입
+## 가상환경 실행
 (in web folder) source server/bin/activate
+
+## 가상환경 종료
+deactivate
