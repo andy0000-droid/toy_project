@@ -29,3 +29,7 @@ hotfix: 현재 서비스에서 긴급하게 수정해야 되는 부분에 대하
 
 ## git pull
 최신 상태의 레포지토리 가져오기
+
+# 개발 관련
+## 가상환경 진입
+(in web folder) source server/bin/activate
