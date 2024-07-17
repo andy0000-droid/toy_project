@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - "8084:80"
+    volumes:
+      - ./django/venti/nginx:/etc/nginx.conf.d
+      - ./django/app:/app
+      - ./django/venti/static:/static
+    depends_on:
+      - django_app
+
+  mysql:
+    image: mariadb:latest
+    container_name: mysql
+    expose:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: Blog
+      MYSQL_USER: root
+      MYSQL_PASSWORD: blogdb5385
+      MYSQL_ROOT_PASSWORD: blogdb5385_root
+    volumes:
+      - ../db/data:/var/lib/mysql
+      - ../db/data/conf.d:/etc/mysql/conf.d
+
+  django_app:
+    container_name: django_app
+    build:
+      context: .
+      dockerfile: ./django/Dockerfile
+    command: gunicorn kuku.wsgi:application --bind 0.0.0.0:8000
+    expose:
+      - "8000"
+    depends_on:
+      - mysql
+    links:
+      - mysql:mysql
+    restart: always
+    volumes:
+      - ./django/app:/app
+    env_file:
+      - ./django/env.dev
+
+networks:
+  app-tier:
+    driver: bridge
