@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "main",
-    "posting",
+    "post",
     "post_write",
     "profile_conf",
 ]
