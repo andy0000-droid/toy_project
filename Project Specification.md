@@ -49,17 +49,16 @@ This directory exsiting for testing app and Django configuration
 
 ### Database Structure
 #### Mainpage
+- Content
+
+#### Post
 - PostID
 - Post Title
 - Post Absract
 - Write Time
+- Post Content
 - Category
 - The number of Like
-
-#### Post
-- Post Title
-- Post Abstract
-- Post Content
 - Posted / Teporarily Saved
 
 #### Writing Post
