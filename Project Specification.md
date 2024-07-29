@@ -63,7 +63,11 @@ This directory exsiting for testing app and Django configuration
 - Posted / Teporarily Saved
 
 #### Writing Post
-$\rarr$ Use Post database
+$\rightarrow$ Use Post database
 
 #### Profile Configuration
-TBD ($\because$ Need meet-up with Backend teammate)
+- Blog Address
+- Blog Name
+- About Me
+- Category
+- Profile Image
