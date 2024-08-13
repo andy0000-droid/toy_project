@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-zf88i5puu_)5&l^m&o#@^q3%(!=m_^7)!2q$p8bogtt!egrd%a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",  # For Django Restful API
     "main",
     "posting",
     "writing",

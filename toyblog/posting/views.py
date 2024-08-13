@@ -1,8 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 
 # Create your views here.
-def func(request):
-    return HttpResponse("<h1> This is postpage </h1>")  # Testing code
-    # return render(request)
+def func(request, postid):
+    return HttpResponse("<h1>" + str(postid) + " post page </h1>")
+
+
+def main(request):
+    return HttpResponse("<h1> Posting mainpage </h1>")
