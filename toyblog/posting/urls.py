@@ -4,5 +4,6 @@ from . import views as post
 
 urlpatterns = [
     path("", post.main, name="post"),
-    path("<postid>/", post.func),
+    path("<int:postid>/", post.show),
+    path("write/", post.write, name="write"),
 ]
