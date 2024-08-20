@@ -18,10 +18,8 @@ class Posting(models.Model):
     # like # text
     like = models.IntegerField()
     # posted # bool
-    posted = models = BooleaField(initial=False)
-    
-    def __str__(self):
-        
-        return self.title
-    
+    posted = models.BooleanField(default=False)
 
+    # def __str__(self):
+
+    #    return self.title
