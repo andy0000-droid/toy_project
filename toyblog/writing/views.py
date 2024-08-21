@@ -4,4 +4,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def func(request):
+
     return HttpResponse("<h1> Writing page </h1>")
