@@ -1,25 +1,32 @@
+"""
+Posting Database
+"""
+
 from django.db import models
+from django.contrib.auth import get_user_model
+from writing import models as post_db
 
 
-# Create your models here.
+def db_error():
+    """
+    Print error when occured
+    """
+
+    print("Database error occured")
+    print("Accssing a Database that has not been created")
+    return get_user_model().objects.get_or_create(id=-1)
+
+
 class Posting(models.Model):
-    # id # hex or int
-    id = models.IntegerField()
-    # tttle # text
-    title = models.TextField()
-    # abstract # test
-    abstrack = models.TextField()
-    # time # date
-    time = models.DateTimeField(auto_now=False)
-    # content # bin
-    content = models.TextField()
-    # cat # text
-    cat = models.TextField()
-    # like # text
+    """
+    post: Get Foreign Database from writing
+    like: The number of likes for Post
+    """
+
+    post = models.ForeignKey(post_db, on_delete=models.SET(db_error))
     like = models.IntegerField()
-    # posted # bool
-    posted = models.BooleanField(default=False)
+    # Read
 
-    # def __str__(self):
+    # Update
 
-    #    return self.title
+    # Delete

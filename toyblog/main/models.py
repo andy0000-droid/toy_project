@@ -3,5 +3,11 @@ from django.db import models
 
 # Create your models here.
 class Mainpage(models.Model):
-    # component content #
     component = models.ImageField()
+    # Create
+
+    # Read
+
+    # Update
+
+    # Delete
