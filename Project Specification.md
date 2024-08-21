@@ -51,18 +51,18 @@ This directory exsiting for testing app and Django configuration
 #### Mainpage
 - Content
 
-#### Post
+#### Writing Post
 - PostID
 - Post Title
 - Post Absract
 - Write Time
 - Post Content
 - Category
-- The number of Like
 - Posted / Teporarily Saved
 
-#### Writing Post
+#### Post
 $\rightarrow$ Use Post database
+- The number of Like
 
 #### Profile Configuration
 - Blog Address
