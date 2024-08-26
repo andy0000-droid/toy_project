@@ -25,6 +25,7 @@ class Posting(models.Model):
 
     post = models.ForeignKey(post_db, on_delete=models.SET(db_error))
     like = models.IntegerField()
+
     # Read
 
     # Update

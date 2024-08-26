@@ -1,8 +1,16 @@
+"""
+Profile Database
+"""
+
 from django.db import models
 
 
 # Create your models here.
 class Profile(models.Model):
+    """
+    Class for profile
+    """
+
     addr = models.TextField()
     name = models.TextField()
     about = models.TextField()
