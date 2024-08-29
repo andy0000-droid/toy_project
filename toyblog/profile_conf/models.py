@@ -10,9 +10,11 @@ class Profile(models.Model):
     img = models.ImageField()
 
     def __str__(self):
-        return str(self.name)
-
+        _name = name
+        _addr = addr
+        return _name + "의" + _addr + "블로그 입니다."
     # Create
+    
 
     # Read
 
