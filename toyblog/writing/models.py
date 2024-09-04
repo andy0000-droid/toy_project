@@ -18,14 +18,16 @@ class Writing(models.Model):
     publish: Post is published or not
     """
 
-    id = models.IntegerField()
-    title = models.TextField()
-    abstract = models.TextField()
-    time = models.DateTimeField(auto_now_add=True)
-    update_time = models.DateTimeField(auto_now=True)
-    content = models.TextField()
-    cat = models.TextField()
-    publish = models.BooleanField(default=False)
+    id = models.IntegerField(verbose_name="Post ID")
+    title = models.TextField(blank=False, verbose_name="Post Title")
+    abstract = models.TextField(verbose_name="Post Abstract")
+    time = models.DateTimeField(auto_now_add=True, verbose_name="Writing Time")
+    update_time = models.DateTimeField(auto_now=True, verbose_name="Post Update Time")
+    content = models.TextField(blank=False, verbose_name="Post Content")
+    cat = models.TextField(verbose_name="Post Category")
+    publish = models.BooleanField(
+        default=False, verbose_name="Checking for Publish or Temporally Saved"
+    )
 
     def __str__(self):
         res_str = "ID: " + self.id + "\nTitle: " + self.title

@@ -11,7 +11,7 @@ class Mainpage(models.Model):
     Class for mainpage
     """
 
-    component = models.ImageField()
+    component = models.ImageField(verbose_name="Mainpage Component")
 
     # Create
 
